@@ -229,7 +229,8 @@ public:
     uint8_t getFifoStatus();
     void resetTrigger();
     
-    
+    void setAxisOffset(int x, int y, int z);
+
 private:
     TwoWire *_wire;
     SPIClass *_spi;

@@ -610,6 +610,11 @@ void ADXL345_WE::resetTrigger(){
     setFifoMode(ADXL345_TRIGGER);
 }
 
+void ADXL345_WE::setAxisOffset(int x, int y, int z) {
+    writeRegister(ADXL345_OFSX, byte (x));
+    writeRegister(ADXL345_OFSY, byte (y));
+    writeRegister(ADXL345_OFSZ, byte (z));
+}
 
 /************************************************ 
     private functions
